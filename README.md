@@ -1,254 +1,266 @@
-# \# SQLite Airline Management App  
+\# SQLite Airline Management App  
 
-# \### Desktop Reservation System Built with C#, Windows Forms, and SQLite
+\### Desktop Reservation System Built with C#, Windows Forms, and SQLite
 
-# 
 
-# \## System Architecture
 
-# 
+\## System Architecture
 
-# +-------------------------------------------------------+
 
-# |                   Windows Forms UI                    |
 
-# |                                                       |
+\## System Architecture
 
-# |  mainFrm  →  bookingFrm  →  receiptFrm               |
 
-# |                                                       |
 
-# +----------------------------↓--------------------------+
+```
 
-# &nbsp;                            |
++---------------------------------------------------+
 
-# &nbsp;                            v
+|                Windows Forms UI                   |
 
-# +-------------------------------------------------------+
+|                                                   |
 
-# |                Application Logic Layer                |
+|   mainFrm  ->  bookingFrm  ->  receiptFrm        |
 
-# |  - Booking validation                                 |
+|                                                   |
 
-# |  - Seat allocation logic                              |
++---------------------------+-----------------------+
 
-# |  - Workflow coordination                              |
+&nbsp;                           |
 
-# +----------------------------↓--------------------------+
+&nbsp;                           v
 
-# &nbsp;                            |
++---------------------------------------------------+
 
-# &nbsp;                            v
+|            Application Logic Layer                |
 
-# +-------------------------------------------------------+
+|                                                   |
 
-# |              Data Access Layer (EF 6 ORM)             |
+|   - Booking validation                            |
 
-# |  - DbContext                                          |
+|   - Seat allocation                               |
 
-# |  - Entity Models                                      |
+|   - Workflow coordination                         |
 
-# |  - CRUD Operations                                    |
++---------------------------+-----------------------+
 
-# +----------------------------↓--------------------------+
+&nbsp;                           |
 
-# &nbsp;                            |
+&nbsp;                           v
 
-# &nbsp;                            v
++---------------------------------------------------+
 
-# +-------------------------------------------------------+
+|          Data Access Layer (Entity Framework)     |
 
-# |                SQLite Embedded Database               |
+|                                                   |
 
-# |  AirlineReservationSystem.db                          |
+|   - DbContext                                     |
 
-# +-------------------------------------------------------+
+|   - Entity Models                                 |
 
-# 
+|   - CRUD Operations                               |
 
-# \## Overview
++---------------------------+-----------------------+
 
-# 
+&nbsp;                           |
 
-# SQLite Airline Management App is a transactional desktop reservation system developed in C# using Windows Forms and SQLite. The application leverages Entity Framework as an ORM to manage relational data access and persistence.
+&nbsp;                           v
 
-# 
++---------------------------------------------------+
 
-# The system models a simplified airline booking workflow, enabling users to create reservations, manage seat allocations, and generate booking confirmations through a structured multi-form interface.
+|             SQLite Embedded Database              |
 
-# 
+|                                                   |
 
-# This project demonstrates applied software engineering principles in a stateful desktop environment with persistent data storage.
+|   AirlineReservationSystem.db                     |
 
-# 
++---------------------------------------------------+
 
-# \## Core Capabilities
+```
 
-# 
+\## Overview
 
-# \- Reservation creation and seat allocation
 
-# \- Persistent booking storage using SQLite
 
-# \- Entity Framework-based data abstraction
+SQLite Airline Management App is a transactional desktop reservation system developed in C# using Windows Forms and SQLite. The application leverages Entity Framework as an ORM to manage relational data access and persistence.
 
-# \- Structured multi-form navigation workflow
 
-# \- Receipt generation and booking confirmation
 
-# \- Local embedded database for standalone execution
+The system models a simplified airline booking workflow, enabling users to create reservations, manage seat allocations, and generate booking confirmations through a structured multi-form interface.
 
-# 
 
-# \## Architecture Overview
 
-# 
+This project demonstrates applied software engineering principles in a stateful desktop environment with persistent data storage.
 
-# The application follows a layered design approach:
 
-# 
 
-# \### 1. Presentation Layer
+\## Core Capabilities
 
-# Windows Forms-based UI handling user interaction and navigation.
 
-# 
 
-# \### 2. Application Logic Layer
+\- Reservation creation and seat allocation
 
-# Implements:
+\- Persistent booking storage using SQLite
 
-# \- Booking workflow coordination
+\- Entity Framework-based data abstraction
 
-# \- Input validation
+\- Structured multi-form navigation workflow
 
-# \- Seat availability handling
+\- Receipt generation and booking confirmation
 
-# \- Reservation confirmation logic
+\- Local embedded database for standalone execution
 
-# 
 
-# \### 3. Data Access Layer
 
-# Entity Framework manages:
+\## Architecture Overview
 
-# \- Database context lifecycle
 
-# \- Entity modeling
 
-# \- Query execution
+The application follows a layered design approach:
 
-# \- CRUD operations
 
-# 
 
-# \### 4. Persistence Layer
+\### 1. Presentation Layer
 
-# SQLite provides:
+Windows Forms-based UI handling user interaction and navigation.
 
-# \- Lightweight embedded relational storage
 
-# \- Portable database file
 
-# \- Zero external server dependencies
+\### 2. Application Logic Layer
 
-# 
+Implements:
 
-# \## Technology Stack
+\- Booking workflow coordination
 
-# 
+\- Input validation
 
-# \- C#
+\- Seat availability handling
 
-# \- .NET Framework
+\- Reservation confirmation logic
 
-# \- Windows Forms
 
-# \- SQLite
 
-# \- Entity Framework 6
+\### 3. Data Access Layer
 
-# \- Visual Studio
+Entity Framework manages:
 
-# 
+\- Database context lifecycle
 
-# \## Design Considerations
+\- Entity modeling
 
-# 
+\- Query execution
 
-# \- \*\*Embedded database\*\* selected to eliminate external infrastructure requirements.
+\- CRUD operations
 
-# \- \*\*ORM abstraction\*\* used to reduce manual SQL management and improve maintainability.
 
-# \- \*\*Multi-form separation\*\* implemented to isolate concerns between navigation, booking, and confirmation logic.
 
-# \- \*\*Local persistence\*\* ensures application portability across development environments.
+\### 4. Persistence Layer
 
-# 
+SQLite provides:
 
-# \## How to Run
+\- Lightweight embedded relational storage
 
-# 
+\- Portable database file
 
-# \### Requirements
+\- Zero external server dependencies
 
-# 
 
-# \- Visual Studio
 
-# \- .NET Framework 4.x
+\## Technology Stack
 
-# \- NuGet package restore enabled
 
-# 
 
-# \### Setup
+\- C#
 
-# 
+\- .NET Framework
 
-# 1\. Clone the repository.
+\- Windows Forms
 
-# 2\. Open `sqlite-airline-management-app.sln` in Visual Studio.
+\- SQLite
 
-# 3\. Restore NuGet packages.
+\- Entity Framework 6
 
-# 4\. Build the solution.
+\- Visual Studio
 
-# 5\. Run the application.
 
-# 
 
-# \## Engineering Concepts Demonstrated
+\## Design Considerations
 
-# 
 
-# \- Desktop application architecture
 
-# \- Layered design separation
+\- \*\*Embedded database\*\* selected to eliminate external infrastructure requirements.
 
-# \- ORM-based relational data access
+\- \*\*ORM abstraction\*\* used to reduce manual SQL management and improve maintainability.
 
-# \- State-driven workflow management
+\- \*\*Multi-form separation\*\* implemented to isolate concerns between navigation, booking, and confirmation logic.
 
-# \- Persistent transactional data handling
+\- \*\*Local persistence\*\* ensures application portability across development environments.
 
-# \- Configuration management via App.config
 
-# 
 
-# \## Purpose
+\## How to Run
 
-# 
 
-# This project demonstrates implementation of a structured, stateful desktop reservation system with embedded database persistence. It reflects practical application of GUI design, data modeling, and workflow orchestration within a managed .NET environment.
 
+\### Requirements
 
 
-# \## Notes
 
-# 
+\- Visual Studio
 
-# \- Build artifacts (`bin/`, `obj/`, `.vs/`) are excluded.
+\- .NET Framework 4.x
 
-# \- SQLite database file included for demonstration purposes.
+\- NuGet package restore enabled
+
+
+
+\### Setup
+
+
+
+1\. Clone the repository.
+
+2\. Open `sqlite-airline-management-app.sln` in Visual Studio.
+
+3\. Restore NuGet packages.
+
+4\. Build the solution.
+
+5\. Run the application.
+
+
+
+\## Engineering Concepts Demonstrated
+
+
+
+\- Desktop application architecture
+
+\- Layered design separation
+
+\- ORM-based relational data access
+
+\- State-driven workflow management
+
+\- Persistent transactional data handling
+
+\- Configuration management via App.config
+
+
+
+\## Purpose
+
+
+
+This project demonstrates implementation of a structured, stateful desktop reservation system with embedded database persistence. It reflects practical application of GUI design, data modeling, and workflow orchestration within a managed .NET environment.
+
+
+
+\## Notes
+
+
+
+\- Build artifacts (`bin/`, `obj/`, `.vs/`) are excluded.
+
+\- SQLite database file included for demonstration purposes.
 

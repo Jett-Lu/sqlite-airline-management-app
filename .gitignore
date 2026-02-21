@@ -1,10 +1,7 @@
 bin/
 obj/
 .vs/
-packages/
-*.pdb
-*.exe
-*.cache
+*.user
 *.suo
-desktop.ini
-Thumbs.db
+*.cache
+*.log
