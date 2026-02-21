@@ -3,8 +3,6 @@
 
 ## System Architecture
 
-## System Architecture
-
 ```
 +---------------------------------------------------+
 |                Windows Forms UI                   |
